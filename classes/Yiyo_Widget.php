@@ -24,15 +24,26 @@ class Yiyo_Widget extends WP_Widget {
  
         echo $args['before_widget'];
  
-        if ( ! empty( $instance['title'] ) ) {
-            echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
-        }
+
+        $html = "
+            <div class='card'>
+                <h3 class='card-header'>{$instance['heading'] }</h3>
+                <div class='card-body'>
+                    <div class='row'>
+                        <div class='col-6'>
+                            <img src=' "  . $instance['image'] . "' class='img-fluid' alt='image'>
+                        </div>
+                        <div class='col'>
+                            <p>
+                                {$instance['subtitle'] }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        ";
  
-        echo '<div class="textwidget">';
- 
-        echo esc_html__( $instance['text'], 'yiyo_widget' );
- 
-        echo '</div>';
+        echo $html;
  
         echo $args['after_widget'];
  
@@ -80,3 +91,4 @@ class Yiyo_Widget extends WP_Widget {
 }
 $my_widget = new Yiyo_Widget();
 ?>
+
