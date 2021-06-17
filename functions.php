@@ -1,5 +1,6 @@
 <?php
      require  get_template_directory()  .'/classes/Yiyo_Trial_Walker.php';
+     require  get_template_directory()  .'/classes/Yiyo_Widget.php';
 
     function yiyo_trial_theme_support(){
         add_theme_support( 'title-tag' );
@@ -16,6 +17,8 @@
         register_nav_menus( $locations);
     }
 
+    add_action('init', 'yiyo_trial_menus');
+
     function yiyo_trial_widgets_init() {
 
         register_sidebar( array(
@@ -26,13 +29,13 @@
             'before_title'  => '<h2 class="rounded">',
             'after_title'   => '</h2>',
         ) );
-    
+
+        register_widget( 'Yiyo_Widget' );
     }
     
     add_action( 'widgets_init', 'yiyo_trial_widgets_init' );
+     
 
-
-    add_action('init', 'yiyo_trial_menus');
 
     function yiyo_trial_register_styles(){
         //$version = $wp_get_theme()->get('Version');
@@ -64,6 +67,7 @@
         wp_enqueue_script('aos-js', get_template_directory_uri() . '/assets/vendor/aos/aos.js', array(), '' , 'all');
         wp_enqueue_script('aos-js', get_template_directory_uri() . '/assets/vendor/aos/aos.js', array(), '' , 'all');
         wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', array(), $version , 'all');
+        wp_enqueue_script('wp-media', get_template_directory_uri() . '/assets/js/wp-media-library.js', array(), $version , 'all');
 
     }
 
