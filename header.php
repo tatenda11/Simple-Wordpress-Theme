@@ -59,11 +59,12 @@
                 'menu' => 'primary',
                 'container' => '',
                 'theme_location' => 'primary',
-                'depth' => 1
+                'walker' => new Yiyo_Trial_Walker()
             )
         );
       ?>
       </nav>
+    
 <!--
       <nav class="nav-menu d-none d-lg-block">
         <ul>
