@@ -31,7 +31,7 @@ class Yiyo_Widget extends WP_Widget {
                 <div class='card-body'>
                     <div class='row'>
                         <div class='col-6'>
-                            <img src=' "  . $instance['image'] . "' class='img-fluid' alt='image'>
+                            <img style='max-width:100%;' src=' "  . $instance['image'] . "' class='img-fluid' alt='image'>
                         </div>
                         <div class='col'>
                             <p>
