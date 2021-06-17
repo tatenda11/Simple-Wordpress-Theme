@@ -16,6 +16,22 @@
         register_nav_menus( $locations);
     }
 
+    function yiyo_trial_widgets_init() {
+
+        register_sidebar( array(
+            'name'          => 'Right sidebar',
+            'id'            => 'home_right_1',
+            'before_widget' => '<div>',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="rounded">',
+            'after_title'   => '</h2>',
+        ) );
+    
+    }
+    
+    add_action( 'widgets_init', 'yiyo_trial_widgets_init' );
+
+
     add_action('init', 'yiyo_trial_menus');
 
     function yiyo_trial_register_styles(){
