@@ -56,7 +56,7 @@
     <?php  if( !empty($logo)): ?>
         <a href="/" class="logo mr-auto"><img src="<?php echo $logo[0]; ?>" alt=""></a>
     <?php else:?>
-        <h1 class="logo mr-auto"><a href="/">BizLand<span>.</span></a></h1>
+        <h1 class="logo mr-auto"><a href="/"><?php echo get_bloginfo('name'); ?><span>.</span></a></h1>
     <?php endif;?>
     
     
