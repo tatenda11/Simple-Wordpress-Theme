@@ -1,4 +1,5 @@
 <?php
+     require  get_template_directory()  .'/classes/Yiyo_Trial_Walker.php';
 
     function yiyo_trial_theme_support(){
         // add_theme_support('title-tag');
@@ -6,6 +7,16 @@
     }
 
     add_action('after_setup_theme', 'yiyo_trial_theme_support');
+
+    function yiyo_trial_menus(){
+        $locations = array(
+            'primary' => 'Header primary menu'
+        );
+
+        register_nav_menus( $locations);
+    }
+
+    add_action('init', 'yiyo_trial_menus');
 
     function yiyo_trial_register_styles(){
         //$version = $wp_get_theme()->get('Version');
