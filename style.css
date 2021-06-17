@@ -258,7 +258,7 @@ body {
     width: 100%;
   }
   
-  .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+  .nav-menu a:hover,.nav-menu .current-menu-item, .nav-menu .active > a, .nav-menu li:hover > a {
     color: #106eea;
   }
   
