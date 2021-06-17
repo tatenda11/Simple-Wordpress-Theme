@@ -18,8 +18,6 @@
    <?php wp_head(); ?>
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
   <!-- =======================================================
   * Template Name: BizLand - v1.2.1
   * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
@@ -54,7 +52,19 @@
       <h1 class="logo mr-auto"><a href="index.html">BizLand<span>.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
-
+      <nav class="nav-menu d-none d-lg-block">
+      <?php
+        wp_nav_menu(
+            array(
+                'menu' => 'primary',
+                'container' => '',
+                'theme_location' => 'primary',
+                'depth' => 1
+            )
+        );
+      ?>
+      </nav>
+<!--
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.html">Home</a></li>
@@ -82,7 +92,7 @@
           <li><a href="#contact">Contact</a></li>
 
         </ul>
-      </nav><!-- .nav-menu -->
+      </nav> .nav-menu -->
 
     </div>
   </header><!-- End Header -->
