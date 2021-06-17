@@ -25,3 +25,7 @@ I Tested this theme with
 
 1. Custom website logo
 2. Dynamic site title
+
+# Todo
+1. Update other template files to use site theme
+2. Favicon must be dynamic
